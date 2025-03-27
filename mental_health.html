@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover mental health resources at the University of Michigan, including CAPS, wellness coaching, and mindfulness resources to support your well-being.">
-    <meta name="keywords" content="University of Michigan, mental health, CAPS, wellness coaching, mindfulness, support groups">
+    <link rel="icon" type="image/jpg" href="images/UMSI_fav.jpg" />
+    <meta name="description"
+        content="Discover mental health resources at the University of Michigan, including CAPS, wellness coaching, and mindfulness resources to support your well-being.">
+    <meta name="keywords"
+        content="University of Michigan, mental health, CAPS, wellness coaching, mindfulness, support groups">
     <meta name="author" content="UMSI">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Mental Health Resources - University of Michigan</title>
 </head>
+
 <body>
 
     <header>
-        <a href="#main-content">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+
         <nav>
+            <div class="logo">
+                <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="physical_health.html">Physical Health</a></li>
-                <li><a href="mental_health.html">Mental Health</a></li>
+                <li><a href="mental_health.html" class="active">Mental Health</a></li>
                 <li><a href="academic.html">Academic Resources</a></li>
             </ul>
         </nav>
         <h1>Mental Health Resources</h1>
     </header>
 
-    <main id="main-content">
+    <main class="container" id="main">
         <section>
             <h2>Welcome to Mental Health Resources</h2>
-            <p>Maintaining your mental health is critical for success. The University of Michigan provides a variety of services to support your mental well-being and ensure you thrive during your academic journey.</p>
+            <p>Maintaining your mental health is critical for success. The University of Michigan provides a variety of
+                services to support your mental well-being and ensure you thrive during your academic journey.</p>
         </section>
 
         <section>
@@ -36,24 +47,31 @@
                 <img src="images/caps2.jpg" alt="CAPS logo">
                 <figcaption>CAPS Office at the University of Michigan.</figcaption>
             </figure>
-            <p>CAPS offers individual counseling, group therapy, workshops, and crisis intervention services to help you navigate challenges and maintain mental well-being. <a href="https://caps.umich.edu">Learn more about CAPS.</a></p>
+            <p>CAPS offers individual counseling, group therapy, workshops, and crisis intervention services to help you
+                navigate challenges and maintain mental well-being. <a href="https://caps.umich.edu">Learn more about
+                    CAPS.</a></p>
         </section>
         <section>
             <h2>Wellness Coaching</h2>
             <figure>
-                <img src="images/wellness.jpg" alt="Wellness Coaching Session">
-                <figcaption>Students working with a wellness coach.</figcaption>
+                <img src="images/wellness.jpg" alt="Some general wellness information">
+                <figcaption>Helpful wellness information.</figcaption>
             </figure>
-            <p>Work with a wellness coach to develop personalized strategies for managing stress, time, and overall well-being. <a href="https://wolverinewellness.umich.edu/wellness-coaching">Learn more about Wellness Coaching.</a></p>
+            <p>Work with a wellness coach to develop personalized strategies for managing stress, time, and overall
+                well-being. <a href="https://wolverinewellness.umich.edu/wellness-coaching">Learn more about Wellness
+                    Coaching.</a></p>
         </section>
 
         <section>
             <h2>Mindfulness Resources</h2>
             <figure>
-                <img src="images/mindful.jpg" alt="Mindfulness Session">
+                <img src="images/mindful.jpg" alt="Mindfulness session">
                 <figcaption>A mindfulness session in progress.</figcaption>
             </figure>
-            <p>Participate in mindfulness and meditation sessions to cultivate a calm and focused mind. Explore resources to integrate mindfulness into your daily life. <a href="https://michigan-mindfulness.medicine.umich.edu/">Learn more about Mindfulness Resources.</a></p>
+            <p>Participate in mindfulness and meditation sessions to cultivate a calm and focused mind. Explore
+                resources to integrate mindfulness into your daily life. <a
+                    href="https://michigan-mindfulness.medicine.umich.edu/">Learn more about Mindfulness Resources.</a>
+            </p>
         </section>
 
         <section>
@@ -62,14 +80,30 @@
                 <img src="images/studentsgroup_0.jpg" alt="Support Group Meeting">
                 <figcaption>A support group meeting at UM.</figcaption>
             </figure>
-            <p>Join peer support groups for shared experiences and collective coping strategies. These groups provide a safe space to connect and grow together. <a href="https://medicine.umich.edu/dept/psychiatry/patient-care/support-groups">Learn more about Support Groups.</a></p>
+            <p>Join peer support groups for shared experiences and collective coping strategies. These groups provide a
+                safe space to connect and grow together. <a
+                    href="https://medicine.umich.edu/dept/psychiatry/patient-care/support-groups">Learn more about
+                    Support Groups.</a></p>
         </section>
         <!-- Content taken & modified from ChatGPT with the prompt, "make a mental_health.html page that fits the same recs as the other pages."
         ChatGPT. (2025). ChatGPT [Large language model]. -->
     </main>
 
     <footer>
+        <p>University of Michigan School of Information <br />
+            &copy; Eli Helzberg - Web Design Winter 2025</p>
+        <script>
+            const year = new Date().getFullYear();
+            document.querySelector("footer p").innerHTML += `<br/>© ${year}`;
+        </script>
     </footer>
-
+    <button id="scrollTopBtn" style="position:fixed;bottom:20px;right:20px;display:none;">↑</button>
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = () => scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
+        scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    </script>
+    
 </body>
+
 </html>

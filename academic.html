@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore academic resources at the University of Michigan, including study spaces, BSI advising, and tutoring to support your academic success.">
-    <meta name="keywords" content="University of Michigan, academic resources, study spaces, BSI advising, tutoring, student success">
+    <link rel="icon" type="image/jpg" href="images/UMSI_fav.jpg" />
+    <meta name="description"
+        content="Explore academic resources at the University of Michigan, including study spaces, BSI advising, and tutoring to support your academic success.">
+    <meta name="keywords"
+        content="University of Michigan, academic resources, study spaces, BSI advising, tutoring, student success">
     <meta name="author" content="UMSI">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Academic Resources - University of Michigan</title>
 </head>
+
 <body>
 
     <header>
-        <a href="#main-content">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+
         <nav>
+            <div class="logo">
+                <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+            </div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="physical_health.html">Physical Health</a></li>
                 <li><a href="mental_health.html">Mental Health</a></li>
-                <li><a href="academic.html">Academic Resources</a></li>
+                <li><a href="academic.html" class="active">Academic Resources</a></li>
             </ul>
         </nav>
         <h1>Academic Resources</h1>
     </header>
 
-    <main id="main-content">
+    <main class="container" id="main">
         <section>
             <h2>Welcome to Academic Resources</h2>
-            <p>Achieving academic success requires the right support and tools. The University of Michigan offers various resources to help you excel in your studies and reach your goals.</p>
+            <p>Achieving academic success requires the right support and tools. The University of Michigan offers
+                various resources to help you excel in your studies and reach your goals.</p>
         </section>
 
         <section>
             <h2>Study Spaces</h2>
             <figure>
-                <img src="images/studyspaces.jpg" alt="Students studying in a library">
+                <img src="images/studyspaces.png" alt="Students studying in a library">
                 <figcaption>Explore study spaces on campus for a productive environment.</figcaption>
             </figure>
-            <p>Find quiet and collaborative study spaces across campus, including libraries, lounges, and designated areas. <a href="https://lib.umich.edu/visit-and-study/study-spaces">Learn more about Study Spaces.</a></p>
+            <p>Find quiet and collaborative study spaces across campus, including libraries, lounges, and designated
+                areas. <a href="https://lib.umich.edu/visit-and-study/study-spaces">Learn more about Study Spaces.</a>
+            </p>
         </section>
 
         <section>
@@ -45,7 +58,10 @@
                 <img src="images/bsi.jpg" alt="BSI advising session in progress">
                 <figcaption>BSI advising sessions help students plan their academic paths.</figcaption>
             </figure>
-            <p>Meet with BSI advisors to discuss academic planning, course selection, and career guidance. They are here to support you every step of the way. <a href="https://www.si.umich.edu/programs/bachelor-science-information">Learn more about BSI Advising.</a></p>
+            <p>Meet with BSI advisors to discuss academic planning, course selection, and career guidance. They are here
+                to support you every step of the way. <a
+                    href="https://www.si.umich.edu/programs/bachelor-science-information">Learn more about BSI
+                    Advising.</a></p>
         </section>
 
         <section>
@@ -54,15 +70,34 @@
                 <img src="images/UMSI_tutoring.jpg" alt="Tutoring session">
                 <figcaption>Access tutoring services to excel in challenging courses.</figcaption>
             </figure>
-            <p>Utilize tutoring services for individual and group sessions to strengthen your understanding of course material. <a href="https://lsa.umich.edu/slc/tutoring.html">Learn more about Tutoring Services.</a></p>
+            <p>Utilize tutoring services for individual and group sessions to strengthen your understanding of course
+                material. <a href="https://lsa.umich.edu/slc/tutoring.html">Learn more about Tutoring Services.</a></p>
         </section>
-         <!-- Content taken & modified from ChatGPT with the prompt, "make a academic.html with the same style as the other pages. Should have sections that link to study spaces, bsi advising, tutoring."
+        <section>
+            <p>MSI Academic Advising | <a
+                    href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI
+                    Academic Advising Resources</a></p>
+        </section>
+        <!-- Content taken & modified from ChatGPT with the prompt, "make a academic.html with the same style as the other pages. Should have sections that link to study spaces, bsi advising, tutoring."
         ChatGPT. (2025). ChatGPT [Large language model]. -->
     </main>
 
     <footer>
-        <p>MSI Academic Advising | <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Academic Advising Resources</a></p>
-    </footer>
+        <p>University of Michigan School of Information <br />
+            &copy; Eli Helzberg - Web Design Winter 2025</p>
+            <script>
+                const year = new Date().getFullYear();
+                document.querySelector("footer p").innerHTML += `<br/>© ${year}`;
+            </script>
 
+    </footer>
+    <button id="scrollTopBtn" style="position:fixed;bottom:20px;right:20px;display:none;">↑</button>
+    <script>
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = () => scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
+        scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    </script>
+    
 </body>
+
 </html>

@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="images/UMSI_fav.jpg" />
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Student Success Portal</title>
 </head>
-<body>
+
+<body class="home-page">
 
     <header>
-  <a href = "">Skip to Main Content</a>
-        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+
         <nav>
+            <div class="logo">
+                <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="physical_health.html">Physical Health</a></li>
                 <li><a href="mental_health.html">Mental Health</a></li>
                 <li><a href="academic.html">Academic Resources</a></li>
             </ul>
+
         </nav>
+
         <h1>Student Success Portal</h1>
 
     </header>
-    <main>
-        <section>
+    <main class="container" id="main">
+        <section class="text-block">
+
             <h2>Welcome to the UM Undergrad Success Navigator</h2>
             <p> Your Comprehensive Guide to Resources for Undergraduate School Success</p>
-            <p>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
+            <p>This guide is set up to help you be successul inside and outside of the classroom and we have included
+                the following resources throughout our site:</p>
             <ol>
                 <li>Physical Health - looking for a place to stay in shape? Check out our facilities.</li>
                 <li>Mental Health - need some counseling or feeling down? We can help with that, too.</li>
@@ -34,6 +46,20 @@
         </section>
     </main>
     <footer>
+        <p>University of Michigan School of Information <br />
+            &copy; Eli Helzberg - Web Design Winter 2025</p>
+        <script>
+            const year = new Date().getFullYear();
+            document.querySelector("footer p").innerHTML += `<br/>© ${year}`;
+        </script>
     </footer>
+    <button id="scrollTopBtn" style="position:fixed;bottom:20px;right:20px;display:none;">↑</button>
+<script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
+    scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+</script>
+
 </body>
+
 </html>
