@@ -71,5 +71,10 @@ body.dark-mode {
 }
 
 .dark-mode a.button {
+    background-color: #1f1f1f;
     color: white;
+}
+
+.dark-mode a.button:hover {
+    background-color: #333333;
 }
