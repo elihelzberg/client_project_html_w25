@@ -69,3 +69,7 @@ body.dark-mode {
 #darkToggle:hover {
     background-color: #0066cc;
 }
+
+.dark-mode a.button {
+    color: white;
+}
