@@ -1,20 +1,18 @@
 @media screen and (prefers-reduced-motion: reduce){
     html{
-        scroll-behavior: auto; /* Removes scroll animation */
+        scroll-behavior: auto;
     }
   
     .skip a{
-      -webkit-transition: none; /* sets to default setting */
-      transition: none;        /* sets to default setting */
+      -webkit-transition: none; 
+      transition: none;      
      }
   
-    /*Turn off parallax*/
     header{
       background-attachment: initial;
     }
   }
 
-  /* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +25,6 @@ body {
     padding: 1rem;
 }
 
-/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -171,11 +168,28 @@ ol li {
 }
 
 footer {
-    text-align: center;
-    padding: 1rem;
-    background: #004080;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    background-color: #004080;
     color: white;
-    margin-top: 2rem;
+    text-align: left;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1 1 300px;
+}
+
+.footer-right p {
+    text-align: right;
+}
+
+.footer-right strong {
+    display: block;
+    margin-bottom: 0.25rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -187,6 +201,12 @@ footer {
     .container {
         grid-template-columns: 1fr;
     }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }    
 
     .home-page .text-block {
         max-width: 800px;
